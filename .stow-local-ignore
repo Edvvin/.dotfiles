@@ -6,7 +6,7 @@
 .+~
 \#.*\#
 \.svn
-\.magic
+magic
 \.hg
 _darcs
 .+,v
