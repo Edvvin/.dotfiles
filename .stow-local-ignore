@@ -1,0 +1,14 @@
+\.git
+\.gitignore
+^/LICENSE.*
+^/README.*
+^/COPYING.*
+.+~
+\#.*\#
+\.svn
+\.magic
+\.hg
+_darcs
+.+,v
+\.\#.+
+\.csvignore
