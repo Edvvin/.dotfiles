@@ -2,6 +2,7 @@
 # History
 #########################
 HISTFILE=$HOME/.cache/zsh/history
+ZSH_COMPDUMP='$HOME/.cache/zsh/history'
 HISTSIZE=10000000
 SAVEHIST=10000000
 
@@ -14,6 +15,16 @@ setopt hist_expire_dups_first
 setopt hist_save_no_dups
 setopt hist_ignore_space
 setopt hist_verify
+
+#########################
+# Functions
+#########################
+source "$ZDOTDIR/zsh-functions"
+
+zsh_add_file "zsh-vim-mode"
+zsh_add_file "zsh-exports"
+zsh_add_file "zsh-prompt"
+zsh_add_file "zsh-aliases"
 
 #########################
 # Conda
@@ -33,17 +44,22 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export EDITOR=vim
-export BROWSER=firefox
+#########################
+# Plugins
+#########################
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+#zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "softmoth/zsh-vim-mode"
 
 #########################
-# Autocomplete
+# Completions
 #########################
-autoload -U compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
 comp_options+=(globdots)
+zsh_add_completion "esc/conda-zsh-completion" false
+compinit
 
 #########################
 # Key settings
@@ -60,60 +76,19 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-#########################
-# Vim mode
-#########################
-bindkey -v
-export KEYTIMEOUT=1
+setxkbmap -model pc104 -layout us,rs -option grp:alt_shift_toggle
 
-# different cursors for different modes
-function zle-keymap-select () {
-    case $KEYMAP in
-        vicmd) echo -ne '\e[1 q';;
-        viins|main) echo -ne '\e[5 q';;
-    esac
-}
-zle -N zle-keymap-select
+# Swap escape and capslock
+#setxkbmap -option caps:swapescape
 
-# init in normal mode
-zle-line-init() {
-    zle -K viins
-    echo -ne '\e[5 q'
-}
-zle -N zle-line-init
+# Remaps caps to escape
+# setxkbmap -option caps:escape
 
-echo -ne '\e[5 q'
-preexec() {echo -ne '\e[5 q' ;}
-
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
-
-# To make vim mode work more fluently
-# i.e. not to pause when changeing modes
-bindkey -M vicmd '^[' undefined-key
-bindkey -rM viins '^X'
-bindkey -M viins '^X,' _history-complete-newer \
-                 '^X/' _history-complete-older \
-                 '^X`' _bash_complete-word
-
-
-#########################
-# Aliases
-#########################
-alias pacup='sudo pacman -Syu'
-alias pacs='pacman -Ss'
-alias pacins='sudo pacman -S'
-alias pacr='sudo pacman -Rs'
-alias pacr='pacman -Q'
-alias ..="cd .."
-
-#########################
-# Colors
-#########################
-autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 setopt autocd
 stty stop undef
 setopt interactive_comments
 
+
+# Move this to zsh_add_plugin ^^^
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
+wal -q -i /home/edvin/Pictures/1390893.jpg

@@ -1,0 +1,9 @@
+#########################
+# Aliases
+#########################
+alias pacup='sudo pacman -Syu'
+alias pacs='pacman -Ss'
+alias pacins='sudo pacman -S'
+alias pacr='sudo pacman -Rs'
+alias pacq='pacman -Q'
+alias ..="cd .."

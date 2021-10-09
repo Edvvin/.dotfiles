@@ -2,8 +2,18 @@ set $mod Mod4
 
 # window settings
 # remove header bar
+new_window pixel 3
+client.focused #4c7833  #4c7833  #4c7833  #4c7833  #4c7833 
+hide_edge_borders vertical
 
-new_window 1pixel
+# gaps
+gaps inner 25
+bindsym $mod+g gaps inner all plus 5
+bindsym $mod+shift+g gaps inner all minus 5
+
+# Start up
+
+exec_always wal -q -i /home/edvin/Pictures/1390893.jpg
 
 font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
@@ -141,6 +151,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+
 mode "resize" {
         bindsym h resize shrink width 20 px or 20 ppt
         bindsym j resize grow height 20 px or 20 ppt
@@ -160,3 +171,4 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
