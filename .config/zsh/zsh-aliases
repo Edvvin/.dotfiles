@@ -1,9 +1,20 @@
 #########################
 # Aliases
 #########################
+
+# Pacman
 alias pacup='sudo pacman -Syu'
 alias pacs='pacman -Ss'
 alias pacins='sudo pacman -S'
 alias pacr='sudo pacman -Rs'
 alias pacq='pacman -Q'
+
+# Navigation
 alias ..="cd .."
+
+# Styles
+LIGHT_COLORS='solarized_light.yaml'
+DARK_COLORS='afterglow.yaml'
+
+alias day="alacritty-colorscheme -V apply $LIGHT_COLORS"
+alias night="alacritty-colorscheme -V apply $DARK_COLORS"
