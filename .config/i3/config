@@ -13,7 +13,7 @@ bindsym $mod+shift+g gaps inner all minus 5
 
 # Start up
 
-exec_always wal -qts -i /home/edvin/Pictures/1390893.jpg
+exec_always wal -qts -i /home/edvin/Pictures/cell.jpg
 font pango:monospace 8
 #font pango:DejaVu Sans Mono 8
 

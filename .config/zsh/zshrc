@@ -67,16 +67,14 @@ compinit
 
 bindkey '^P' up-line-or-search
 bindkey '^N' down-line-or-search
-bindkey '^H' history-incremental-search-backward
 
 # Vim keys for complete menu
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
 
-setxkbmap -model pc104 -layout us,rs -option grp:alt_shift_toggle
+setxkbmap -model pc104 -layout us,hr,rs -option grp:alt_shift_toggle
 
 # Swap escape and capslock
 #setxkbmap -option caps:swapescape
@@ -91,4 +89,4 @@ setopt interactive_comments
 
 # Move this to zsh_add_plugin ^^^
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
-wal -qts -i /home/edvin/Pictures/1390893.jpg
+wal -qts -i /home/edvin/Pictures/cell.jpg

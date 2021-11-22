@@ -9,6 +9,9 @@ alias pacins='sudo pacman -S'
 alias pacr='sudo pacman -Rs'
 alias pacq='pacman -Q'
 
+# Vim
+alias v='vim'
+
 # Navigation
 alias ..="cd .."
 
