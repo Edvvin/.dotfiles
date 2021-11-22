@@ -3,7 +3,7 @@ set $mod Mod4
 # window settings
 # remove header bar
 new_window pixel 3
-client.focused #4c7833  #4c7833  #4c7833  #4c7833  #4c7833 
+client.focused #e3208b #e3208b #e3208b #e3208b #e3208b 
 hide_edge_borders vertical
 
 # gaps

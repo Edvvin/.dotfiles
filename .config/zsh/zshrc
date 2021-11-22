@@ -89,4 +89,4 @@ setopt interactive_comments
 
 # Move this to zsh_add_plugin ^^^
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh 2>/dev/null
-wal -qts -i /home/edvin/Pictures/cell.jpg
+#wal -q -i /home/edvin/Pictures/cell.jpg

@@ -67,7 +67,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.0
+  opacity: 0.7
 
   # Startup Mode (changes require restart)
   #
@@ -864,52 +864,36 @@ shell:
   # Print all received window events.
   #print_events: false
 
+# Colors
 colors:
-  # COLORSCHEME: afterglow.yaml
   # Default colors
   primary:
-    background: '0x2c2c2c'
-    foreground: '0xd6d6d6'
+    background: "0x1E1E3F"
+    foreground: "0xE1EFFF"
 
-    dim_foreground: '0xdbdbdb'
-    bright_foreground: '0xd9d9d9'
-    dim_background: '0x202020'    # not sure
-    bright_background: '0x3a3a3a' # not sure
-
-  # Cursor colors
+  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x2c2c2c'
-    cursor: '0xd9d9d9'
+    text: "0x1E1E3F"
+    cursor: "0xFAD000"
 
   # Normal colors
   normal:
-    black: '0x1c1c1c'
-    red: '0xbc5653'
-    green: '0x909d63'
-    yellow: '0xebc17a'
-    blue: '0x7eaac7'
-    magenta: '0xaa6292'
-    cyan: '0x86d3ce'
-    white: '0xcacaca'
+    black: "0x000000"
+    red: "0xEC3A37"
+    green: "0x75e44c"
+    yellow: "0xFAD000"
+    blue: "0x6943FF"
+    magenta: "0xFF2C70"
+    cyan: "0x80FCFF"
+    white: "0xFFFFFF"
 
   # Bright colors
   bright:
-    black: '0x636363'
-    red: '0xbc5653'
-    green: '0x909d63'
-    yellow: '0xebc17a'
-    blue: '0x7eaac7'
-    magenta: '0xaa6292'
-    cyan: '0x86d3ce'
-    white: '0xf7f7f7'
-
-  # Dim colors
-  dim:
-    black: '0x232323'
-    red: '0x74423f'
-    green: '0x5e6547'
-    yellow: '0x8b7653'
-    blue: '0x556b79'
-    magenta: '0x6e4962'
-    cyan: '0x5c8482'
-    white: '0x828282'
+    black: "0x5C5C61"
+    red: "0xEC3A37"
+    green: "0x3AD900"
+    yellow: "0xFAD000"
+    blue: "0x6943FF"
+    magenta: "0xFB94FF"
+    cyan: "0x80FCFF"
+    white: "0x2D2B55"
