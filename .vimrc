@@ -2,6 +2,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set relativenumber
+set number
 set noexpandtab
 
 set wildmenu
