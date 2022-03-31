@@ -14,6 +14,8 @@ alias v='vim'
 
 # Navigation
 alias ..="cd .."
+alias ll="ls -lah"
+
 
 # Styles
 LIGHT_COLORS='solarized_light.yaml'
