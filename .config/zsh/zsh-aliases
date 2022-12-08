@@ -21,5 +21,8 @@ alias ll="ls -lah"
 LIGHT_COLORS='solarized_light.yaml'
 DARK_COLORS='afterglow.yaml'
 
+# nmcli
+alias nmcon='nmcli device wifi connect'
+
 alias day="alacritty-colorscheme -V apply $LIGHT_COLORS"
 alias night="alacritty-colorscheme -V apply $DARK_COLORS"
