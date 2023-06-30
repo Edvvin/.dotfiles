@@ -26,3 +26,9 @@ alias nmcon='nmcli device wifi connect'
 
 alias day="alacritty-colorscheme -V apply $LIGHT_COLORS"
 alias night="alacritty-colorscheme -V apply $DARK_COLORS"
+
+# git
+alias gitedo="eval `ssh-agent -s`
+			ssh-add ~/.ssh/mnlp"
+
+alias gs="git status"

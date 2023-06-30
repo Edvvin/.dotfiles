@@ -167,6 +167,7 @@ mode "resize" {
 }
 
 exec_always --no-startup-id picom
+exec_always --no-startup-id dunst
 
 bindsym $mod+r mode "resize"
 
